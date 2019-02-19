@@ -1,0 +1,63 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.topNavBar {
+    padding: 34px 32px;
+}
+
+.topNavBar .logo {
+    float: left;
+    font-size: 26px;
+    font-family: 'Arial Black';
+    padding: 4px 0;
+}
+
+.topNavBar .logo .rs {
+    color: rgb(232, 103, 107);
+    margin-right: 5px;
+}
+
+.topNavBar .logo .card {
+    color: rgb(154, 157, 162)
+}
+
+.topNavBar nav {
+    float: right;
+}
+
+.topNavBar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+
+.topNavBar nav ul>li {
+    float: left;
+    margin: 0 17px;
+}
+
+.topNavBar nav ul>li>a {
+    display: block;
+    padding: 12px 0;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 5px solid transparent;
+}
+
+.topNavBar nav ul>li>a:hover {
+    border-bottom: 5px solid rgb(232, 103, 107)
+}
