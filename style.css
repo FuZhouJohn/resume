@@ -1,5 +1,5 @@
-body{
-    background-color: #ededed;
+body {
+  background-color: #ededed;
 }
 * {
   padding: 0;
@@ -104,7 +104,7 @@ hr {
 .introduction .text .profile .welcome {
   display: inline-block;
   padding: 4px 16px;
-  background-color: #E6686A;
+  background-color: #e6686a;
   color: #fff;
   position: relative;
 }
@@ -116,7 +116,7 @@ hr {
   content: "";
   width: 0;
   border: 12px solid transparent;
-  border-left-color: #E6686A;
+  border-left-color: #e6686a;
   border-top-width: 0;
 }
 .introduction .text h1 {
@@ -138,24 +138,24 @@ hr {
   color: #9da0a7;
 }
 
-.introduction .media{
-    background-color: #E6686A;
-    text-align: center;
+.introduction .media {
+  background-color: #e6686a;
+  text-align: center;
 }
-.introduction .media a{
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    margin: 15px;
+.introduction .media a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: 15px;
 }
-.introduction .media a:hover{
-    background-color: #CF5D5F;
+.introduction .media a:hover {
+  background-color: #cf5d5f;
 }
-.introduction .media .icon{
-    margin-top: 6px;
-    width: 28px;
-    height: 28px;
-    fill: #fff;
-    vertical-align: top;
+.introduction .media .icon {
+  margin-top: 6px;
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+  vertical-align: top;
 }
