@@ -1,63 +1,161 @@
-body {
-    padding: 0;
-    margin: 0;
-    background: black;
+body{
+    background-color: #ededed;
+}
+* {
+  padding: 0;
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
+hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid #dedede;
+}
 .clearfix::after {
-    content: '';
-    clear: both;
-    display: block;
+  content: "";
+  clear: both;
+  display: block;
 }
 
 .topNavBar {
-    padding: 34px 32px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 34px 32px;
 }
 
 .topNavBar .logo {
-    float: left;
-    font-size: 26px;
-    font-family: 'Arial Black';
-    padding: 4px 0;
+  float: left;
+  font-size: 26px;
+  font-family: "Arial Black";
+  padding: 4px 0;
 }
 
 .topNavBar .logo .rs {
-    color: rgb(232, 103, 107);
-    margin-right: 5px;
+  color: rgb(232, 103, 107);
+  margin-right: 5px;
 }
 
 .topNavBar .logo .card {
-    color: rgb(154, 157, 162)
+  color: rgb(154, 157, 162);
 }
 
 .topNavBar nav {
-    float: right;
+  float: right;
 }
 
 .topNavBar nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 13px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
 }
 
-.topNavBar nav ul>li {
-    float: left;
-    margin: 0 17px;
+.topNavBar nav ul > li {
+  float: left;
+  margin: 0 17px;
 }
 
-.topNavBar nav ul>li>a {
-    display: block;
-    padding: 12px 0;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.7);
-    border-bottom: 5px solid transparent;
+.topNavBar nav ul > li > a {
+  display: block;
+  padding: 12px 0;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 5px solid transparent;
 }
 
-.topNavBar nav ul>li>a:hover {
-    border-bottom: 5px solid rgb(232, 103, 107)
+.topNavBar nav ul > li > a:hover {
+  border-bottom: 5px solid rgb(232, 103, 107);
+}
+
+.banner {
+  background-image: url("./image/rs-cover.jpg");
+  height: 515px;
+}
+.banner .mask {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.introduction {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+.introduction .pictureAndText {
+  padding: 52px;
+}
+
+.introduction .pictureAndText .picture,
+.introduction .pictureAndText .text {
+  float: left;
+}
+
+.introduction .pictureAndText .text {
+  margin-left: 66px;
+  width: 470px;
+}
+
+.introduction .text .profile .welcome {
+  display: inline-block;
+  padding: 4px 16px;
+  background-color: #E6686A;
+  color: #fff;
+  position: relative;
+}
+.introduction .text .profile .welcome::after {
+  position: absolute;
+  left: 6px;
+  top: 100%;
+  display: block;
+  content: "";
+  width: 0;
+  border: 12px solid transparent;
+  border-left-color: #E6686A;
+  border-top-width: 0;
+}
+.introduction .text h1 {
+  margin-top: 28px;
+}
+.introduction .text hr {
+  margin: 20px 0;
+}
+.introduction .text dl dt,
+.introduction .text dl dd {
+  float: left;
+  padding: 7px 0;
+}
+.introduction .text dl dt {
+  width: 30%;
+}
+.introduction .text dl dd {
+  width: 70%;
+  color: #9da0a7;
+}
+
+.introduction .media{
+    background-color: #E6686A;
+    text-align: center;
+}
+.introduction .media a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 15px;
+}
+.introduction .media a:hover{
+    background-color: #CF5D5F;
+}
+.introduction .media .icon{
+    margin-top: 6px;
+    width: 28px;
+    height: 28px;
+    fill: #fff;
+    vertical-align: top;
 }
