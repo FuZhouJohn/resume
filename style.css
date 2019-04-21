@@ -32,7 +32,7 @@ hr { height: 0; border: none; border-top: 1px solid #dedede; }
   from{ opacity: 0; margin-right: 100%; }
   to{ opacity: 1; margin-right: 0; }
 }
-.topNavBar .navMenu>li{ color:#3d4451; line-height: 35px; padding: 0 31px; }
+.topNavBar .navMenu>li{ color:#3d4451; line-height: 35px; padding: 0 31px;cursor: pointer; }
 .topNavBar .navMenu>li:hover{ background-color: #fafafa; color: #e8676b; }
 
 .banner { position: absolute; top: 0; left: 0; width: 100%; background-image: url("./image/rs-cover.jpg"); height: 515px; z-index: -1; }
