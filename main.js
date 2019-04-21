@@ -30,14 +30,28 @@ function makeTopNavBarSticky(){
     }
 }
 
-let topNavBarTitles = document.querySelectorAll('.topNavBar>nav>ul>li')
-for(var i=0;i<topNavBarTitles.length;i++){
-    topNavBarTitles[i].onmouseenter = function(e){
+var topNavBarLi = document.querySelectorAll('.topNavBar>nav>ul>li')
+for(var i=0;i<topNavBarLi.length;i++){
+    topNavBarLi[i].onmouseenter = function(e){
         var li = e.currentTarget;
         li.classList.add('active')
     }
-    topNavBarTitles[i].onmouseleave = function(e){
+    topNavBarLi[i].onmouseleave = function(e){
         var li = e.currentTarget;
         li.classList.remove('active')
+    }
+}
+var topNavBarATags = document.querySelectorAll('.topNavBar>nav>ul>li>a')
+for(var i=0;i<topNavBarATags.length;i++){
+    topNavBarATags[i].onclick = function(e){
+        var a = e.currentTarget
+        var href = a.getAttribute('href')
+        if(href !== 'javascrpit:void(0)'){
+            e.preventDefault()
+            let anchor = document.querySelectorAll(href)[0]
+            if(anchor){
+                window.scrollTo({"behavior": "smooth", "top": anchor.offsetTop - 90})
+            }
+        }
     }
 }
