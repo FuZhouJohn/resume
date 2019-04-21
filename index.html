@@ -17,6 +17,9 @@
 </head>
 
 <body>
+  <div id='loadingMask' class='loadingMask active'>
+    <div class="loading"></div>
+  </div>
   <div class="topNavBar clearfix">
     <a class="logo" href="javascrpit:void(0)" alt="logo" style="float: left; ">
       <span class="rs">RS</span><span class="card">card</span>
@@ -142,6 +145,11 @@
   </section>
 </body>
 <script>
+  document.addEventListener('DOMContentLoaded',function(){
+    setTimeout(function(){
+      loadingMask.classList.remove('active')
+    },1000)
+  });
   all.addEventListener('click', function () {
     filterBarLine.className = 'filterBarLine all'
   })
