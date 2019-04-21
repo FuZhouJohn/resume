@@ -1,359 +1,65 @@
-body {
-  background-color: #ededed;
-  padding-bottom: 50px;
-}
+body { background-color: #ededed; padding-bottom: 50px; }
+* { padding: 0; margin: 0; }
+a { text-decoration: none; }
+ul, li { list-style: none; }
+hr { height: 0; border: none; border-top: 1px solid #dedede; }
 
-* {
-  padding: 0;
-  margin: 0;
-}
+.clearfix::after { content: ""; clear: both; display: block; }
 
-a {
-  text-decoration: none;
-}
+.topNavBar { position: fixed; left: 0; top: 0; right: 0; padding: 34px 32px; }
+.topNavBar .logo { float: left; font-size: 26px; font-family: "Arial Black"; padding: 4px 0; }
+.topNavBar .logo .rs { color: rgb(232, 103, 107); margin-right: 5px; }
+.topNavBar .logo .card { color: rgb(154, 157, 162); }
+.topNavBar nav { float: right; }
+.topNavBar nav ul { padding: 0; margin: 0; font-size: 13px; }
+.topNavBar nav ul>li { float: left; margin: 0 17px; }
+.topNavBar nav ul>li>a { display: block; padding: 12px 0; font-weight: bold; color: rgba(255, 255, 255, 0.7); border-bottom: 5px solid transparent; }
+.topNavBar nav ul>li>a:hover { border-bottom: 5px solid rgb(232, 103, 107); }
 
-ul, li {
-  list-style: none;
-}
+.banner { position: absolute; top: 0; left: 0; width: 100%; background-image: url("./image/rs-cover.jpg"); height: 515px; z-index: -1; }
+.banner .mask { height: 100%; background-color: rgba(0, 0, 0, 0.8); }
 
-hr {
-  height: 0;
-  border: none;
-  border-top: 1px solid #dedede;
-}
+body>main { margin-top: 170px; }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: block;
-}
+.introduction { max-width: 940px; margin-left: auto; margin-right: auto; background-color: #fff; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
+.introduction .pictureAndText { padding: 52px; }
+.introduction .pictureAndText .picture, .introduction .pictureAndText .text { float: left; }
+.introduction .pictureAndText .text { margin-left: 66px; width: 470px; }
+.introduction .text .profile .welcome { display: inline-block; padding: 4px 16px; background-color: #e6686a; color: #fff; position: relative; font-weight: bold; }
+.introduction .text .profile .welcome::after { position: absolute; left: 6px; top: 100%; display: block; content: ""; width: 0; border: 12px solid transparent; border-left-color: #e6686a; border-top-width: 0; }
+.introduction .text h1 { margin-top: 28px; }
+.introduction .text hr { margin: 20px 0; }
+.introduction .text dl dt, .introduction .text dl dd { float: left; padding: 7px 0; }
+.introduction .text dl dt { width: 30%; }
+.introduction .text dl dd { width: 70%; color: #9da0a7; }
+.introduction .media { background-color: #e6686a; text-align: center; }
+.introduction .media a { display: inline-block; width: 40px; height: 40px; border-radius: 100%; margin: 15px; }
+.introduction .media a:hover { background-color: #cf5d5f; }
+.introduction .media .icon { margin-top: 6px; width: 28px; height: 28px; fill: #fff; vertical-align: top; }
 
-.topNavBar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  padding: 34px 32px;
-}
+body>main>.resumeDownloadButton { margin-left: auto; margin-right: auto; font-size: 15px; line-height: 58px; border: 1px solid rgb(205, 207, 209); display: block; padding: 0 57px; width: fit-content; font-weight: bold; color: #3d4451; background-color: transparent; border-radius: 2px; margin-top: 35px; transition: all 0.3s ease-out; }
+body>main>.resumeDownloadButton:hover { box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+body>main>.individualResume { max-width: 940px; margin-left: auto; margin-right: auto; text-align: center; line-height: 2.3; margin-top: 30px; font-family: kai; }
+body>section { margin-top: 70px; }
+body>section>h2 { color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600; text-align: center; margin-bottom: 32px; }
 
-.topNavBar .logo {
-  float: left;
-  font-size: 26px;
-  font-family: "Arial Black";
-  padding: 4px 0;
-}
+section.skills { max-width: 940px; margin-left: auto; margin-right: auto; }
+section.skills>ol { background-color: #fff; padding: 43px 50px 21px; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
+section.skills>ol>li { float: left; width: 50%; box-sizing: border-box; margin-bottom: 35px; }
+section.skills>ol>li:nth-child(odd) { padding-right: 15px; }
+section.skills>ol>li:nth-child(even) { padding-left: 15px; }
+section.skills>ol>li>h3 { font-size: 14px; line-height: 1.9; font-weight: normal; color: #3d4451; }
+section.skills .progressBar { height: 5px; border-radius: 2px; background-color: rgb(250, 225, 225); }
+section.skills .progress { height: 100%; border-radius: 2px; background-color: rgb(232, 103, 107); }
 
-.topNavBar .logo .rs {
-  color: rgb(232, 103, 107);
-  margin-right: 5px;
-}
-
-.topNavBar .logo .card {
-  color: rgb(154, 157, 162);
-}
-
-.topNavBar nav {
-  float: right;
-}
-
-.topNavBar nav ul {
-  padding: 0;
-  margin: 0;
-  font-size: 13px;
-}
-
-.topNavBar nav ul>li {
-  float: left;
-  margin: 0 17px;
-}
-
-.topNavBar nav ul>li>a {
-  display: block;
-  padding: 12px 0;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.7);
-  border-bottom: 5px solid transparent;
-}
-
-.topNavBar nav ul>li>a:hover {
-  border-bottom: 5px solid rgb(232, 103, 107);
-}
-
-.banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-image: url("./image/rs-cover.jpg");
-  height: 515px;
-  z-index: -1;
-}
-
-.banner .mask {
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-body>main {
-  margin-top: 170px;
-}
-
-.introduction {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #fff;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-}
-
-.introduction .pictureAndText {
-  padding: 52px;
-}
-
-.introduction .pictureAndText .picture, .introduction .pictureAndText .text {
-  float: left;
-}
-
-.introduction .pictureAndText .text {
-  margin-left: 66px;
-  width: 470px;
-}
-
-.introduction .text .profile .welcome {
-  display: inline-block;
-  padding: 4px 16px;
-  background-color: #e6686a;
-  color: #fff;
-  position: relative;
-  font-weight: bold;
-}
-
-.introduction .text .profile .welcome::after {
-  position: absolute;
-  left: 6px;
-  top: 100%;
-  display: block;
-  content: "";
-  width: 0;
-  border: 12px solid transparent;
-  border-left-color: #e6686a;
-  border-top-width: 0;
-}
-
-.introduction .text h1 {
-  margin-top: 28px;
-}
-
-.introduction .text hr {
-  margin: 20px 0;
-}
-
-.introduction .text dl dt, .introduction .text dl dd {
-  float: left;
-  padding: 7px 0;
-}
-
-.introduction .text dl dt {
-  width: 30%;
-}
-
-.introduction .text dl dd {
-  width: 70%;
-  color: #9da0a7;
-}
-
-.introduction .media {
-  background-color: #e6686a;
-  text-align: center;
-}
-
-.introduction .media a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  margin: 15px;
-}
-
-.introduction .media a:hover {
-  background-color: #cf5d5f;
-}
-
-.introduction .media .icon {
-  margin-top: 6px;
-  width: 28px;
-  height: 28px;
-  fill: #fff;
-  vertical-align: top;
-}
-
-body>main>.resumeDownloadButton {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 15px;
-  line-height: 58px;
-  border: 1px solid rgb(205, 207, 209);
-  display: block;
-  padding: 0 57px;
-  width: fit-content;
-  font-weight: bold;
-  color: #3d4451;
-  background-color: transparent;
-  border-radius: 2px;
-  margin-top: 35px;
-  transition: all 0.3s ease-out;
-}
-
-body>main>.resumeDownloadButton:hover {
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-}
-
-body>main>.individualResume {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  line-height: 2.3;
-  margin-top: 30px;
-  font-family: kai;
-}
-
-body>section {
-  margin-top: 70px;
-}
-
-body>section>h2 {
-  color: #3d4451;
-  font-size: 34px;
-  line-height: 1.2;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-section.skills {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section.skills>ol {
-  background-color: #fff;
-  padding: 43px 50px 21px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-}
-
-section.skills>ol>li {
-  float: left;
-  width: 50%;
-  box-sizing: border-box;
-  margin-bottom: 35px;
-}
-
-section.skills>ol>li:nth-child(odd) {
-  padding-right: 15px;
-}
-
-section.skills>ol>li:nth-child(even) {
-  padding-left: 15px;
-}
-
-section.skills>ol>li>h3 {
-  font-size: 14px;
-  line-height: 1.9;
-  font-weight: normal;
-  color: #3d4451;
-}
-
-section.skills .progressBar {
-  height: 5px;
-  border-radius: 2px;
-  background-color: rgb(250, 225, 225);
-}
-
-section.skills .progress {
-  height: 100%;
-  border-radius: 2px;
-  background-color: rgb(232, 103, 107);
-}
-
-section.sampleReels>nav>ol {
-  display: flex;
-  width: 286px;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-between;
-}
-
-section.sampleReels>nav>ol>li {
-  float: left;
-  font-size: 13px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #3d4451;
-}
-
-section.sampleReels>nav>.filterBar {
-  background-color: #fff;
-  height: 5px;
-  width: 286px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 16px;
-  border-radius: 2px;
-}
-
-section.sampleReels>nav>.filterBar>.filterBarLine {
-  height: 100%;
-  background-color: rgb(232, 103, 107);
-  position: relative;
-  border-radius: 2px;
-  transition: all 0.3s ease-out;
-}
-
-section.sampleReels>nav>.filterBar>.filterBarLine.all {
-  left: 0;
-  width: 30px;
-}
-
-section.sampleReels>nav>.filterBar>.filterBarLine.framework {
-  left: 100px;
-  width: 40px;
-}
-
-section.sampleReels>nav>.filterBar>.filterBarLine.native {
-  left: calc(100% - 85px);
-  width: 85px;
-}
-
-section.sampleReels>.jobs {
-  max-width: 910px;
-  padding: 0 10px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-  margin-top: 30px;
-}
-
-section.sampleReels>.jobs>div {
-  margin: 0 10px 20px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-}
-
-section.sampleReels>.jobs>.big {
-  height: 600px;
-  width: 570px;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  float: left;
-}
-
-section.sampleReels>.jobs>.small {
-  height: 290px;
-  width: 275px;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  float: left;
-}
+section.sampleReels>nav>ol { display: flex; width: 286px; margin-left: auto; margin-right: auto; justify-content: space-between; }
+section.sampleReels>nav>ol>li { float: left; font-size: 13px; font-weight: bold; cursor: pointer; color: #3d4451; }
+section.sampleReels>nav>.filterBar { background-color: #fff; height: 5px; width: 286px; margin-left: auto; margin-right: auto; margin-top: 16px; border-radius: 2px; }
+section.sampleReels>nav>.filterBar>.filterBarLine { height: 100%; background-color: rgb(232, 103, 107); position: relative; border-radius: 2px; transition: all 0.3s ease-out; }
+section.sampleReels>nav>.filterBar>.filterBarLine.all { left: 0; width: 30px; }
+section.sampleReels>nav>.filterBar>.filterBarLine.framework { left: 100px; width: 40px; }
+section.sampleReels>nav>.filterBar>.filterBarLine.native { left: calc(100% - 85px); width: 85px; }
+section.sampleReels>.jobs { max-width: 910px; padding: 0 10px; margin-left: auto; margin-right: auto; box-sizing: border-box; margin-top: 30px; }
+section.sampleReels>.jobs>div { margin: 0 10px 20px; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
+section.sampleReels>.jobs>.big { height: 600px; width: 570px; background-position: center center; background-size: cover; background-repeat: no-repeat; float: left; }
+section.sampleReels>.jobs>.small { height: 290px; width: 275px; background-position: center center; background-size: cover; background-repeat: no-repeat; float: left; }
