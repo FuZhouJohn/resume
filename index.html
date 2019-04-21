@@ -20,15 +20,29 @@
   <div id='loadingMask' class='loadingMask active'>
     <div class="loading"></div>
   </div>
-  <div class="topNavBar clearfix">
+  <div id='topNavBar' class="topNavBar clearfix">
     <a class="logo" href="javascrpit:void(0)" alt="logo" style="float: left; ">
       <span class="rs">RS</span><span class="card">card</span>
     </a>
     <nav>
       <ul class="clearfix">
         <li><a href="javascrpit:void(0)">关于</a></li>
-        <li><a href="javascrpit:void(0)">技能</a></li>
-        <li><a href="javascrpit:void(0)">作品</a></li>
+        <li>
+          <a href="javascrpit:void(0)">技能</a>
+          <ul class='navMenu'>
+            <li>技能1123</li>
+            <li>技能2</li>
+            <li>技能3</li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascrpit:void(0)">作品</a>
+          <ul class='navMenu'>
+            <li>作品1</li>
+            <li>作品2</li>
+            <li>作品3</li>
+          </ul>
+        </li>
         <li><a href="javascrpit:void(0)">博客</a></li>
         <li><a href="javascrpit:void(0)">日历</a></li>
         <li><a href="javascrpit:void(0)">联系方式</a></li>
@@ -143,24 +157,7 @@
       <div class="small" style="background-image: url('//rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2015/12/photo-1421757295538-9c80958e75b0-2-2-1-1-294x278.jpg');"></div>
     </div>
   </section>
+  <script src="main.js"></script>
 </body>
-<script>
-  document.addEventListener('DOMContentLoaded',function(){
-    setTimeout(function(){
-      loadingMask.classList.remove('active')
-    },1000)
-  });
-  all.addEventListener('click', function () {
-    filterBarLine.className = 'filterBarLine all'
-  })
-
-  framework.addEventListener('click', function () {
-    filterBarLine.className = 'filterBarLine framework'
-  })
-
-  native.addEventListener('click', function () {
-    filterBarLine.className = 'filterBarLine native'
-  })
-</script>
 
 </html>
