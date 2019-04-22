@@ -25,7 +25,7 @@ hr { height: 0; border: none; border-top: 1px solid #dedede; }
 .topNavBar>nav>ul>li { float: left; margin: 0 17px; position: relative;}
 .topNavBar>nav>ul>li>a { display: block; padding: 13px 0; font-weight: bolder; color: inherit; position: relative;}
 .topNavBar>nav>ul>li>a::before{ content:''; display: block; position: absolute; top:calc(100% - 5px); left: 0; width: 0; height: 3px; background-color: rgb(232, 103, 107); transition: width .15s linear; }
-.topNavBar>nav>ul>li.active>a::before { width: 100%; }
+.topNavBar>nav>ul>li.active>a::before,.topNavBar>nav>ul>li.highlight>a::before { width: 100%; }
 .topNavBar>nav>ul>li .navMenu{ position: absolute; white-space: nowrap; top:calc(100% - 2px); right: 0; box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2); background-color: #fff; text-align: right; padding: 10px 0; animation: menuslider .15s linear; display: none; }
 .topNavBar>nav>ul>li.active .navMenu{ display: block; }
 @keyframes menuslider{
@@ -68,9 +68,9 @@ section.skills>ol>li { float: left; width: 50%; box-sizing: border-box; margin-b
 section.skills>ol>li:nth-child(odd) { padding-right: 15px; }
 section.skills>ol>li:nth-child(even) { padding-left: 15px; }
 section.skills>ol>li>h3 { font-size: 14px; line-height: 1.9; font-weight: normal; color: #3d4451; }
-section.skills .progressBar { height: 5px; border-radius: 2px; background-color: rgb(250, 225, 225); }
-section.skills .progress { height: 100%; border-radius: 2px; background-color: rgb(232, 103, 107); }
-
+section.skills .progressBar { height: 5px; border-radius: 2px; background-color: rgb(250, 225, 225);overflow: hidden; }
+section.skills .progress { height: 100%; border-radius: 2px; background-color: rgb(232, 103, 107);transform: translateX(0);transition: all .5s; }
+section.skills.offset .progress{transform: translateX(-100%)}
 section.sampleReels>nav>ol { display: flex; width: 286px; margin-left: auto; margin-right: auto; justify-content: space-between; }
 section.sampleReels>nav>ol>li { float: left; font-size: 13px; font-weight: bold; cursor: pointer; color: #3d4451; }
 section.sampleReels>nav>.filterBar { background-color: #fff; height: 5px; width: 286px; margin-left: auto; margin-right: auto; margin-top: 16px; border-radius: 2px; }
@@ -82,3 +82,11 @@ section.sampleReels>.jobs { max-width: 910px; padding: 0 10px; margin-left: auto
 section.sampleReels>.jobs>div { margin: 0 10px 20px; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
 section.sampleReels>.jobs>.big { height: 600px; width: 570px; background-position: center center; background-size: cover; background-repeat: no-repeat; float: left; }
 section.sampleReels>.jobs>.small { height: 290px; width: 275px; background-position: center center; background-size: cover; background-repeat: no-repeat; float: left; }
+
+[data-x].offset{
+  transform: translateY(100px);
+}
+[data-x]{
+  transform: translateY(0);
+  transition: all .5s;
+}
