@@ -18,6 +18,7 @@
             var view = this.view;
             for (var i = 0; i < view.length; i++) {
                 view[i].addEventListener("click", e => {
+                    e.preventDefault();
                     var a = e.currentTarget;
                     var href = a.getAttribute("href");
                     this.slideUp(href);
@@ -26,7 +27,6 @@
         },
         slideUp: function(href) {
             if (href !== "javascrpit:void(0)") {
-                e.preventDefault();
                 let anchor = document.querySelector(href);
                 if (anchor) {
                     var s = window.scrollY;
