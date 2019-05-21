@@ -317,7 +317,8 @@ body > section > h2 {
     margin-bottom: 32px;
 }
 
-section.skills {
+section.skills,
+section.message {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
@@ -395,4 +396,25 @@ section.sampleReels {
 .mySwiper .swiper-button-next {
     left: 100%;
     right: auto;
+}
+
+section.message .messageBoard {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.24) 0px 1px 4px;
+    padding: 21px 50px 39px;
+}
+section.message ol > li {
+    padding: 16px 0;
+}
+section.message ol > li:not(:last-child) {
+    border-bottom: 1px solid #ededed;
+}
+section.message ol > li .content {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+}
+section.message ol > li .nameAndTime {
+    font-size: 14px;
+    font-weight: 300;
 }

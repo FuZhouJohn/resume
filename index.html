@@ -83,25 +83,29 @@
                     <a
                         href="//www.zhihu.com/people/zhuang-ji-nan-83/"
                         target="_blank"
-                        ><svg class="icon" aria-hidden="true">
-                            <use
-                                xlink:href="#icon-zhihu-circle-fill"
-                            ></use></svg
-                    ></a>
+                    >
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-zhihu-circle-fill"></use>
+                        </svg>
+                    </a>
                     <a
                         href="//zhuanlan.zhihu.com/c_1043898357361647616"
                         target="_blank"
-                        ><svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-blog"></use></svg
-                    ></a>
-                    <a href="//weibo.com/210127007" target="_blank"
-                        ><svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-weibo"></use></svg
-                    ></a>
-                    <a href="//github.com/FuZhouJohn" target="_blank"
-                        ><svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-github"></use></svg
-                    ></a>
+                    >
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-blog"></use>
+                        </svg>
+                    </a>
+                    <a href="//weibo.com/210127007" target="_blank">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-weibo"></use>
+                        </svg>
+                    </a>
+                    <a href="//github.com/FuZhouJohn" target="_blank">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-github"></use>
+                        </svg>
+                    </a>
                 </footer>
             </div>
 
@@ -180,14 +184,28 @@
                 <div class="swiper-button-next"></div>
             </div>
         </section>
+        <section class="message">
+            <h2>留言</h2>
+            <div class="messageBoard">
+                <ol id="messageList"></ol>
+                <form id="postMessageForm">
+                    <label for="">姓名：</label>
+                    <input name="name" type="text" required />
+                    <label for="">内容：</label>
+                    <input name="content" type="text" required />
+                    <input type="submit" value="提交" />
+                </form>
+            </div>
+        </section>
         <script src="./lib/Tween.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-        <script src="./main.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js"></script>
         <script src="./js/loadingMask.js"></script>
         <script src="./js/init-swiper.js"></script>
         <script src="./js/sticky-topBar.js"></script>
         <script src="./js/menu-hightlight.js"></script>
         <script src="./js/auto-slide-up.js"></script>
         <script src="./js/module-slide-up.js"></script>
+        <script src="./js/message-board.js"></script>
     </body>
 </html>
