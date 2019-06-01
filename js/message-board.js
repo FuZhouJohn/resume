@@ -1,6 +1,6 @@
 !function() {
     var view = document.querySelector(".message");
-    var modal = {
+    var model = {
         init: function() {
             var APP_ID = "C8qpfK10NW12Hk8C8qAVEKwq-gzGzoHsz";
             var APP_KEY = "sNufmvveHz1NyvXcOEiz4E7Q";
@@ -25,20 +25,20 @@
     };
     var controller = {
         view: null,
-        modal: null,
+        model: null,
         messageList: null,
         form: null,
-        init: function(view, modal) {
+        init: function(view, model) {
             this.view = view;
-            this.modal = modal;
+            this.model = model;
             this.messageList = view.querySelector("#messageList");
             this.form = view.querySelector("#postMessageForm");
-            this.modal.init();
+            this.model.init();
             this.loadMessage();
             this.bindEvent();
         },
         loadMessage: function() {
-            this.modal.fetch().then(messages => {
+            this.model.fetch().then(messages => {
                 messages.forEach(message => {
                     this.appendMessageNode(message);
                 });
@@ -58,7 +58,7 @@
                 .value;
 
             var name = postMessageForm.querySelector("input[name=name]").value;
-            this.modal.save(name, content).then(object => {
+            this.model.save(name, content).then(object => {
                 this.appendMessageNode(object);
                 postMessageForm.querySelector("input[name=content]").value = "";
             });
@@ -78,5 +78,5 @@
             this.messageList.appendChild(li);
         }
     };
-    controller.init(view, modal);
+    controller.init(view, model);
 }.call();
